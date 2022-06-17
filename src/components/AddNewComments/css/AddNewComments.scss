@@ -1,0 +1,61 @@
+.newComment {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  .input {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    label {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    input {
+      transition: all 0.5s;
+      width: 50%;
+      padding: 15px;
+      outline: none !important;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+        rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+      &:focus {
+        border-color: rgb(27, 75, 148);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+    }
+    textarea {
+      margin-bottom: 10px;
+      height: 76px;
+      width: 52%;
+      font-size: 15px;
+      padding: 5px  10px 5px 10px;
+      outline: none !important;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+        rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+      transition: all 0.5s;
+      box-sizing: border-box;
+      resize: none;
+      &:focus {
+        border-color: rgb(27, 75, 148);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      }
+    }
+  }
+}

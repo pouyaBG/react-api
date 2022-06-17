@@ -1,0 +1,45 @@
+/** @format */
+
+.container {
+  margin: 30px;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 20px 30px -1px;
+  }
+}
+
+.comment {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
+  .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .comment {
+    margin: 1px;
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}

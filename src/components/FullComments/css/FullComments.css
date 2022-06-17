@@ -1,0 +1,54 @@
+.full-container {
+  margin: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: #26394d 0px 20px 30px -10px;
+          box-shadow: #26394d 0px 20px 30px -10px;
+  border-radius: 5px;
+}
+
+.full-comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.full-comments .body-comment {
+  text-align: justify;
+  padding: 10px;
+  max-width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+          box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.full-comments .body-comment p {
+  font-size: 20px;
+}
+
+.full-comments .body-comment::first-letter {
+  font-size: 30px;
+}
+/*# sourceMappingURL=FullComments.css.map */
