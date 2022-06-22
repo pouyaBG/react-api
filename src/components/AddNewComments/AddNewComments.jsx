@@ -3,53 +3,33 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import { useState } from "react";
 import axios from "axios";
-const AddNewComments = () => {
+const AddNewComments = ({ onAddPost }) => {
   // user input in state
   const [comment, setComment] = useState({
     name: "",
     email: "",
     body: "",
   });
-  const nameHandler = (e) => {
-    setComment({
-      ...comment,
-      name: e.target.value,
-    });
-  };
-  const emailHandler = (e) => {
-    setComment({
-      ...comment,
-      email: e.target.value,
-    });
-  };
-  const bodyHandler = (e) => {
-    setComment({
-      ...comment,
-      body: e.target.value,
-    });
-  };
 
   // post
-  const addComment = () => {
-    axios
-      .post("https://jsonplaceholder.typicode.com/comments", comment)
-      .then((res) => console.log(res.data))
-      .catch((err) => console.log(err));
+
+  const newCommentHandler = (e) => {
+    setComment({ ...comment, [e.target.name]: e.target.value });
   };
   return (
     <div className="newComment">
       <h1>Add your comment</h1>
       <div className="input">
         <label>Name</label>
-        <input id="name" type="text" onChange={nameHandler} />
+        <input name="name" type="text" onChange={newCommentHandler} />
       </div>
       <div className="input">
         <label>Email</label>
         <input
-          id="email"
+          name="email"
           type="Email"
           placeholder="example@example.com"
-          onChange={emailHandler}
+          onChange={newCommentHandler}
         />
       </div>
       <div className="input">
@@ -57,12 +37,12 @@ const AddNewComments = () => {
         <textarea
           placeholder="Max Caracters:500"
           maxLength="500"
-          id="body"
-          onChange={bodyHandler}
+          name="body"
+          onChange={newCommentHandler}
           type="text"></textarea>
       </div>
       <Stack direction="row" spacing={4}>
-        <Button variant="contained" onClick={addComment}>
+        <Button variant="contained" onClick={() => onAddPost(comment)}>
           Add New Comment
         </Button>
       </Stack>
